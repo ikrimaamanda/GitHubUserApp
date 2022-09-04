@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/activity_main.xml" value="0.16041666666666668" />
+        <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/activity_detail_user.xml" value="0.22" />
+        <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/activity_splash_screen.xml" value="0.17447916666666666" />
         <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/item_github_user.xml" value="0.1734375" />
+        <entry key="..\:/Kerja/lamaran_kerja/Kompas_id/kompas_test/app/src/main/res/layout/item_repository_user.xml" value="0.1734375" />
       </map>
     </option>
   </component>

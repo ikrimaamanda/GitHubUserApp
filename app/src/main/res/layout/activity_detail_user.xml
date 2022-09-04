@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:paddingHorizontal="24dp"
+    tools:context=".ui.contents.detailuser.DetailUserActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_user"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toTopOf="@id/civ_user"
+        app:layout_constraintBottom_toBottomOf="@id/civ_user"
+        app:layout_constraintStart_toStartOf="@id/civ_user"
+        app:layout_constraintEnd_toEndOf="@id/civ_user"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:text="@string/name"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:maxWidth="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/civ_user"
+        app:layout_constraintTop_toTopOf="@id/civ_user"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:text="@string/username"
+        android:textSize="14sp"
+        android:textColor="@color/grey_70"
+        android:layout_width="wrap_content"
+        android:maxWidth="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_bio_user"
+        android:text="@string/bio"
+        android:textColor="@color/grey_70"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:maxWidth="287dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_f5"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_bio_user"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_repository_user"
+        app:layout_constraintTop_toBottomOf="@id/view_line"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_list_repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="@id/rv_user_repo"
+        app:layout_constraintStart_toStartOf="@id/rv_user_repo"
+        app:layout_constraintEnd_toEndOf="@id/rv_user_repo"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

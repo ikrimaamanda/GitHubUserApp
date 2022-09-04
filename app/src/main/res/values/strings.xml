@@ -3,5 +3,11 @@
     <string name="todo">todo</string>
     <string name="name">Name</string>
     <string name="search_by_username">Search by Username</string>
+    <string name="username">username</string>
+    <string name="bio">Bio</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="zero_number">0</string>
+    <string name="updated_0_hours_ago">Updated 0 hours ago</string>
 
 </resources>

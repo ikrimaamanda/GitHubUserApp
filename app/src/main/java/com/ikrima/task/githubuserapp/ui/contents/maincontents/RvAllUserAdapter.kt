@@ -1,10 +1,13 @@
 package com.ikrima.task.githubuserapp.ui.contents.maincontents
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ikrima.task.githubuserapp.data.responses.DetailUserResponse
 import com.ikrima.task.githubuserapp.databinding.ItemGithubUserBinding
+import com.ikrima.task.githubuserapp.ui.contents.detailuser.DetailUserActivity
+import com.ikrima.task.githubuserapp.utils.helper.UIUtils.loadImage
 
 
 class RvAllUserAdapter : RecyclerView.Adapter<RvAllUserAdapter.RvAllUserViewHolder>() {
@@ -24,7 +27,15 @@ class RvAllUserAdapter : RecyclerView.Adapter<RvAllUserAdapter.RvAllUserViewHold
                 val dataNow = listSearchUser[position]
                 tvItemNameGithubUser.text = dataNow.username
 
+                civItemGithubUser.loadImage(dataNow.avatarURL, itemView.context, progressBar)
 
+                itemGithubUserLayout.setOnClickListener {
+                    val i = Intent(itemView.context, DetailUserActivity::class.java)
+                    i.apply {
+                        putExtra("username", dataNow.username)
+                    }
+                    itemView.context.startActivity(i)
+                }
             }
         }
     }
