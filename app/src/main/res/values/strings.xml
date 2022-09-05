@@ -9,5 +9,6 @@
     <string name="description">Description</string>
     <string name="zero_number">0</string>
     <string name="updated_0_hours_ago">Updated 0 hours ago</string>
+    <string name="not_found">Not Found</string>
 
 </resources>

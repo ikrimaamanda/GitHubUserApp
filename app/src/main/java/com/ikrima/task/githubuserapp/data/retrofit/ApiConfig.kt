@@ -28,7 +28,8 @@ object ApiConfig {
         if (retrofitAPIGitHubUser == null) {
             val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(providenHttpLoggingInterceptor())
-                .addInterceptor(HeaderInterceptor(context))
+                    // used when added personal access token github
+//                .addInterceptor(HeaderInterceptor(context))
                 .connectTimeout(7000, TimeUnit.MINUTES)
                 .readTimeout(1, TimeUnit.MINUTES)
                 .writeTimeout(1, TimeUnit.MINUTES)

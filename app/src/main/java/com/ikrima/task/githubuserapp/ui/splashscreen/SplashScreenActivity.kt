@@ -23,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         val sharedPref = PreferencesHelper(this)
 
-        // don't forget to added token auth github user first
+        // used when added personal access token github
         sharedPref.putValueString(Constant.prefTokenGithub, TokenAuthGithub.tokenGithubUser)
 
         showLogo()

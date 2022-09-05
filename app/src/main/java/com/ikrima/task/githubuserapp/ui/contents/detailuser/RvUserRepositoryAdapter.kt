@@ -35,7 +35,7 @@ class RvUserRepositoryAdapter : RecyclerView.Adapter<RvUserRepositoryAdapter.RvU
 
                 tvNumberOfStars.text = dataNow.numberOfStar.toString()
 
-                val updatedAt = AndroidUtils.getUpdatedTimeFormatter(dataNow)
+                val updatedAt = AndroidUtils.getUpdatedTimeFormatter(dataNow.updatedAt?:"")
                 if (updatedAt.contains("days", false) || updatedAt.contains("hours", false)) {
                     tvUpdatedRepository.text = String.format("Updated $updatedAt")
                 } else {
